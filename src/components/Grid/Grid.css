@@ -1,0 +1,51 @@
+.react-grid-item{
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout{
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.06);
+}
+
+.ContextMenu {
+    background-color: #222529;
+    color: white;
+}
+
+.ContextMenuItem {
+    padding: 6px 8px;
+    cursor: default;
+}
+
+.ContextMenuItem:hover {
+    background-color: #585c61;
+}
+
+.ContentContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+    .ContentContainer {
+        flex-direction: row;
+    }
+}
+
+.custom-file-upload input[type="file"]{
+    display: none;
+}
+
+.react-grid-item > .react-resizable-handle {
+    width: 40px;
+    height: 40px;
+}
+
+.GridHeader{
+    font-weight: 600;
+}

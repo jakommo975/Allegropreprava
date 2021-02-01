@@ -1,0 +1,10 @@
+.EditItemModal{
+    width: 480px;
+    height: 560px;
+    background-color: #eee !important;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+
+

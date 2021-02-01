@@ -1,0 +1,42 @@
+.ControlBar{
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+.ControlBar button{
+    background-color: #0073b7 !important;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 5px;
+    border: none
+}
+
+.ControlBar button:focus{
+    border: none;
+    outline: none;
+}
+
+.ControlBar button:hover{
+    background-color: #056094 !important;
+}
+
+
+.ArrowButton{
+    margin-right: 3px;
+    color: white;
+}
+
+.AddButton {
+    margin-left: 2px;
+    color: white;
+    padding: 2px 5px;
+}
+
+.AddButton i{
+    margin-right: 5px;
+}
+
+.ControlBar button:disabled{
+    background-color: silver !important;
+    cursor: default;
+}

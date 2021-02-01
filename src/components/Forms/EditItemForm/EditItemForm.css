@@ -1,0 +1,225 @@
+
+label {
+    margin-bottom: 4px;
+}
+.ButtonContainer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+}
+
+.ButtonContainer button {
+    background-color: #0073b7 !important;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 3px
+}
+
+.PlusButtonContainer{
+    text-align: center;
+}
+
+.PlusButtonContainer i:hover{
+    color: #367fa9;
+}
+
+.PlusButtonContainer i:active{
+    color: #204d74;
+}
+
+.PlusButtonContainer i{
+    cursor: pointer;
+    font-size: 1.8em;
+    color: #0073b7;
+}
+
+.InputsContainer {
+    margin-bottom: 40px;
+}
+
+.RemovePictureButton{
+    display: inline-block;
+    color: white;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: salmon;
+    border-color: rgb(172, 56, 43);
+    height: max-content;
+    margin-right: 5px;
+}
+
+.RemovePictureButton:hover{
+    background-color: rgb(206, 106, 94);
+}
+
+.RemovePictureButton input{
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    color: white;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #00a65a;
+    border-color: #008d4c;
+    height: max-content;
+    margin-right: 5px;
+}
+
+.custom-file-upload:hover {
+    background-color: #04864c;
+}
+
+.custom-file-upload:active {
+    border: 2px solid white;
+}
+
+
+.ButtonContainer button:disabled{
+    background-color: silver !important;
+    cursor: default;
+}
+
+.ProductInputsWrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ProductInputButtonContainer {
+    width: 80px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.ProductInputButtonContainer button{
+    width: 100%;
+    background-color: #0073b7;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+}
+
+.ProductInputButtonContainer button:nth-child(1){
+    background-color: #0073b7;
+}
+
+.ProductInputButtonContainer button:nth-child(1):disabled{
+    background-color: silver;
+}
+
+.ProductInputButtonContainer button:nth-child(1):hover:disabled{
+    background-color: silver;
+}
+
+.ProductInputButtonContainer button:nth-child(1):hover{
+    background-color: #056094;
+}
+
+.ProductInputButtonContainer button:nth-child(1):focus{
+    outline: none;
+}
+
+.ProductInputButtonContainer button:nth-child(2){
+    background-color: salmon;
+}
+
+.ProductInputButtonContainer button:nth-child(2):hover{
+    background-color: rgb(219, 95, 81);
+}
+
+.ProductInputButtonContainer button:nth-child(2):focus{
+    outline: none;
+}
+
+.ProductInputsBox {
+    background-color: white;
+    padding: 10px 8px 2px 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 21px -1px #ccc;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.FailProduct {
+    padding: 10px 8px 2px 8px;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 12px -1px red;
+}
+
+.SuccessProduct {
+    padding: 10px 8px 2px 8px;
+    border: 1px solid green;
+    border-radius: 5px;
+    box-shadow: 0 0 12px -1px green;
+}
+
+.ProductInputsBox .InputContainer{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.ProductInputsBox .InputContainer label{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.ProductInputsBox .InputContainer input{
+    padding: 2px 4px;
+}
+
+
+@keyframes error{
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.messageShown {
+    opacity: 0;
+    overflow: hidden;
+    animation:  error 1.7s ease-in-out forwards;
+}

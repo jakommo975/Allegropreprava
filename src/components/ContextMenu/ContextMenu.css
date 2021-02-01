@@ -1,0 +1,12 @@
+.ContextMenu {
+    background-color: #222529;
+    color: white;
+}
+
+.ContextMenuItem {
+    padding: 6px 8px;
+}
+
+.ContextMenuItem:hover {
+    background-color: #585c61;
+}

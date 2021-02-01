@@ -1,0 +1,50 @@
+{
+  "name": "jakub",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/js/banners",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "jquery": "^3.5.1",
+    "lightslider": "^1.1.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-elastic-carousel": "^0.7.5",
+    "react-grid-layout": "^1.0.0",
+    "react-modal": "^3.11.2",
+    "react-redux": "^7.2.1",
+    "react-scripts": "3.4.3",
+    "react-slick": "^0.27.11",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "renamer": "^2.0.1"
+  }
+}

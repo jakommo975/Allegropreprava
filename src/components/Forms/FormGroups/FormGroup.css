@@ -1,0 +1,79 @@
+.FormItemCheckbox{
+    margin-bottom: 10px;
+}
+
+
+/**** IN ROWS ****/
+.FormGroupInRowsCheckbox{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.FormGroupInRows{
+    margin-bottom: 15px;
+}
+
+.FormGroupInRows input{
+    width: 100%;
+    padding-left: 7px;
+}
+
+.FormGroupInRows select{
+    padding-left: 5px;
+    width: 100%;
+    height: 38px;
+}
+
+
+
+
+.ProductsInput{
+    display:flex;
+    align-items: center;
+}
+
+.ProductsInput i{
+    font-size: 1.5em;
+    cursor: pointer;
+    color: rgb(255, 109, 93);
+    margin-left: 6px;
+}
+
+.ProductsInput i:active{
+    color: rgb(224, 115, 103);
+}
+
+.ProductsInput i:hover{
+    color:rgb(255, 137, 124);
+}
+
+.ProductsInput input{
+    height: 32px;
+}
+
+@keyframes error{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ErrorMessageContainer{
+    color: red;
+    margin-left: 5px;
+    
+}
+
+
+.errorShown{
+    opacity: 1;
+    overflow: hidden;
+    animation:  error 0.5s ease-in-out forwards;
+}
+
+
+

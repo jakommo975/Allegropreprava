@@ -1,0 +1,40 @@
+.CategoriesContainer {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 18px 25px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: normal Arial, Helvetica, sans-serif;;
+}
+
+.CategoriesContainer h2{
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.CategoriesList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 4px;
+}
+
+.CategoriesList li {
+    list-style-type: none;
+    margin-bottom: 8px;
+}
+
+.CategoriesList li a{
+    list-style-type: none;
+    margin-bottom: 8px;
+    color: #1e99e6;
+    cursor: pointer;
+    font-size: large;
+}
+
+.CategoriesList li a:hover{
+    color: #73bce9;
+    text-decoration: none;
+}

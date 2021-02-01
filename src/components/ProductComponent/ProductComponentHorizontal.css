@@ -1,0 +1,49 @@
+.ProductContainerHorizontal{
+    display: flex;
+  }
+  
+  .ProductContainerHorizontal .ProductImageContainer{
+      width: 126px;
+      height: 126px;
+  }
+  
+  .ProductContainerHorizontal .ProductImage{
+      width: 100%;
+      height: 100%;
+  }
+
+  .ProductContainerHorizontal .DescriptionContainer{
+    justify-content: center;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ProductContainerHorizontal .ProductNameContainer{
+      display: block;
+      max-width: 300px;
+  }
+  
+  .ProductContainerHorizontal .ProductNameContainer h2{
+      color: #4ab2f1;
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+  }
+  
+  
+  .ProductContainerHorizontal .PrizeContainer{
+      display: block;
+  }
+  
+  .ProductContainerHorizontal .PrizeContainer h2{
+      color: #666;
+      font-weight: bold;
+      font-size: 26px;
+  }
+  

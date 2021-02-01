@@ -1,0 +1,22 @@
+.Title {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .Title span{
+    font-size: 2em;
+    font-weight: 500;
+  }
+  
+  .Title a{
+    cursor: pointer;
+    color:#3c8dbc;;
+  }
+  
+  
+  .Title a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color:#72afd2;
+  }

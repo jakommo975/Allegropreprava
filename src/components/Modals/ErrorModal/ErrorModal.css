@@ -1,0 +1,23 @@
+.ErrorModal{
+    width: 470px;
+    background-color: #eee !important;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30%;
+    z-index: 1051;
+}
+
+.ErrorModal p{
+    color: red;
+    font-size: 1.1em;
+}
+
+.ErrorModal button {
+    background-color: #0073b7 !important;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: 100px;
+    margin: 3px;
+}

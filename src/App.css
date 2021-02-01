@@ -1,0 +1,62 @@
+.App {
+  height : 100%;  
+        /* Internet Explorer treats as min-height. */
+}
+
+@keyframes showUp{
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.Panel {
+  background-color: #080b4f;
+  min-height: 100%;
+  width: 15%;
+}
+
+.TopBar{
+  background-color: #b5d6eb;
+  width: 100%;
+  height: 50px;
+}
+
+.Content {
+  min-height: 100%;
+  height: auto;
+  display: flex;
+  background-color: #ecf0f5;
+}
+
+.MainContent {
+  height: 100%;
+  margin-left: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 40px;
+  animation: showUp 0.8s ease-out forwards;
+}
+
+
+.Container{
+  width: 70%;
+  height: 600px;
+  background-color: orange;
+  display: flex;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+
+
+
+
+
