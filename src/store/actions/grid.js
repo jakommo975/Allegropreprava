@@ -19,7 +19,7 @@ export const INIT_ITEMS = "INIT_ITEMS";
 
 
 export const initBannerItems = (bannerId) => {
-    let initItemsUrl = "https://banners-7f144.firebaseio.com/items.json";
+    let initItemsUrl = `http://localhost:55390/Test/BannerItems?bannerId=${bannerId}`;
     if (!isDev()){
         initItemsUrl = `/Admin/Banner/BannerItems?bannerId=${bannerId}`;
     }

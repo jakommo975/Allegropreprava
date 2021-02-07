@@ -4,3 +4,5 @@ export default {
     ROW_HEIGHT: 61,
     CONTAINER_WIDTH: 1150,
 }
+
+/* 1150 */

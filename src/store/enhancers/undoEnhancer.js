@@ -12,7 +12,7 @@ const undoEnhancer = createStore => (
       present: reducer(undefined, {}).grid.items,
       future: []
     }
-    const monitoredReducer = (state, action) => {
+    const undoRedoReducer = (state, action) => {
       let newItems, newPast, newFuture;
       switch (action.type){
         case "UNDO":
@@ -24,8 +24,7 @@ const undoEnhancer = createStore => (
           newFuture.push([...state.present]);
           return {
             ...state,
-            addConst: state.addConst + 20
-            ,
+            addConst: state.addConst + 20,
             past: newPast,
             present: newItems,
             future: newFuture,
@@ -88,7 +87,7 @@ const undoEnhancer = createStore => (
       }
     }
   
-    return createStore(monitoredReducer, initialState, enhancer)
+    return createStore(undoRedoReducer, initialState, enhancer)
   }
 
   export default undoEnhancer;

@@ -20,7 +20,7 @@ import { isDev } from '../../utils/utils';
 
 
 
-const MyFirstGrid = (props) => {
+const Grid = (props) => {
     const items = useSelector(state => state.grid.items);
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
@@ -210,11 +210,16 @@ const MyFirstGrid = (props) => {
         <div className="ContentContainer">
             <ErrorModal />
             <EditItemModal />
-            {process.env.NODE_ENV === "development" && <button name="save" >Save</button>}
-            {process.env.NODE_ENV === "development" && <button name="save-continue" >Save and continue edit</button>}
-            {process.env.NODE_ENV === "development" && <input value="63" type="hidden" id="SelectedCategoryId"/>}
+            
             <div>
-                <h4 className="GridHeader" style={{ marginLeft: 30, marginBottom: 6}}>Edit Layout</h4>
+                <div className="d-flex justify-content-between align-items-center mt-2">
+                    <h4 className="GridHeader" style={{ marginLeft: 30, marginBottom: 6}}>Edit Layout</h4>
+                    <div>
+                        {process.env.NODE_ENV === "development" && <button className="btn btn-primary mr-2" name="save" >Save</button>}
+                        {process.env.NODE_ENV === "development" && <button className="btn btn-primary" name="save-continue" >Save and continue edit</button>}
+                        {process.env.NODE_ENV === "development" && <input value="63" type="hidden" id="SelectedCategoryId"/>}
+                    </div>
+                </div>
                 <div style={{ width: Sizes.CONTAINER_WIDTH, marginLeft: 30, marginRight: "auto", backgroundColor: "#fff" }}>
                     <ControlBar />
                     <GridLayout className="layout"
@@ -271,4 +276,4 @@ const MyFirstGrid = (props) => {
 }
 
 
-export default MyFirstGrid;
+export default Grid;
