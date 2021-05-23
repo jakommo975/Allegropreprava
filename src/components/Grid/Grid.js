@@ -8,6 +8,8 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Item from '../../models/item';
 import Sizes from '../../constants/sizes';
+import {Scree} from '../../constants/sizes';
+
 
 import * as actions from '../../store/actions/grid';
 import ErrorModal from '../Modals/ErrorModal/ErrorModal';
@@ -17,11 +19,14 @@ import ProductSlider from '../ProductSLider/ProductSlider';
 import CategoriesComponent from '../CategoriesComponent/CategoriesComponent';
 import SubmitInputs from './SubmitInputs';
 import { isDev } from '../../utils/utils';
-
+import ScreenSizeButton from '../UI/ScreenSizeButton/ScreenSizeButton';
 
 
 const Grid = (props) => {
     const items = useSelector(state => state.grid.items);
+    const currentScreenSize = useSelector(state => state.currentScreenSize);
+    const currentScreenDefinition = Sizes.filter(definition => definition.name === currentScreenSize)[0];
+
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
     const contextMenuItemId = useRef();
@@ -149,8 +154,6 @@ const Grid = (props) => {
 
     const layoutChangeHandler = (e) => {
         let shouldDispatch = false;
-        // console.log("Layout");
-        // console.log(items);
 
         // Checking if any grid element has changed, so that we know wether rerendering is needed
         // as well as saving new layout as our items
@@ -204,6 +207,16 @@ const Grid = (props) => {
         console.log("Item is not blank");
     }
 
+    const changeScreenSize = (screenSize) => {
+        dispatch({
+            type: "SCREEN_CHANGE",
+            screenSize: screenSize
+        })
+    }
+
+    const getNumberOfColumns = () => {
+        return currentScreenDefinition.CONTAINER_WIDTH / 74;
+    }
 
 
     return (
@@ -220,16 +233,16 @@ const Grid = (props) => {
                         {process.env.NODE_ENV === "development" && <input value="63" type="hidden" id="SelectedCategoryId"/>}
                     </div>
                 </div>
-                <div style={{ width: Sizes.CONTAINER_WIDTH, marginLeft: 30, marginRight: "auto", backgroundColor: "#fff" }}>
+                <div style={{ width: currentScreenDefinition.CONTAINER_WIDTH, marginLeft: 30, marginRight: "auto", backgroundColor: "#fff" }}>
                     <ControlBar />
                     <GridLayout className="layout"
                         style={{}}
                         onLayoutChange={layoutChangeHandler}
                         autoSize={true}
-                        cols={Sizes.NUMBER_OF_COLUMNS}
-                        rows={Sizes.NUMBER_OF_ROWS}
-                        rowHeight={Sizes.ROW_HEIGHT}
-                        width={Sizes.CONTAINER_WIDTH}
+                        cols={getNumberOfColumns()}
+                        rows={currentScreenDefinition.NUMBER_OF_ROWS}
+                        rowHeight={currentScreenDefinition.ROW_HEIGHT}
+                        width={currentScreenDefinition.CONTAINER_WIDTH}
                         onDragStop={layoutChangeHandler}
                     >
                         {
@@ -270,6 +283,30 @@ const Grid = (props) => {
                 </div>
                     {/*Creating inputs from items properties for submitting the whole form to server*/}
                     <SubmitInputs items={items}/>
+                    {
+                        Sizes.map(size => (
+                            <ScreenSizeButton text={size.name} active={currentScreenSize === size.name} onClick={changeScreenSize.bind(this, size.name)}></ScreenSizeButton>
+                        ))
+                    }
+            </div>
+            <div>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/07/06/09/37/green-5376289_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/07/06/09/37/green-5376289_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/07/06/09/37/green-5376289_1280.jpg"/>
+            </div>
+            
+            <div>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/09/01/06/10/lake-5534341_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/07/06/09/37/green-5376289_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/07/06/09/37/green-5376289_1280.jpg"/>
+                <img src="https://cdn.pixabay.com/photo/2020/07/06/09/37/green-5376289_1280.jpg"/>
             </div>
         </div>
     )

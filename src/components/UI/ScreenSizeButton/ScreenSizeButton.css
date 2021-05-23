@@ -1,0 +1,11 @@
+.screen-btn {
+    color: white;
+    background-color: rgb(70, 142, 224);
+}
+
+.screen-btn-active{
+    color: white;
+    background-color:rgb(8, 22, 219);
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+
+}
